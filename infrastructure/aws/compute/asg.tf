@@ -7,6 +7,9 @@ resource "aws_launch_configuration" "web_asg_lc" {
     # prevent timeout
     create_before_destroy = true
   }
+  metadata_options {
+    http_tokens = "required"
+  }
 }
 
 
