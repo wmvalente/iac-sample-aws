@@ -11,7 +11,7 @@ jobs:
       - checkout
       - checkov/scan:
           directory: .
-          api-key-variable: "345b1568-06ac-40a4-9ee4-c85f63737f8a::DpeukOQPv2GRHirlin2L6ivgrSE="
+          api-key: "345b1568-06ac-40a4-9ee4-c85f63737f8a::DpeukOQPv2GRHirlin2L6ivgrSE="
           prisma-api-url: https://api.prismacloud.io
   test:
     docker:
