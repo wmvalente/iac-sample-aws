@@ -11,7 +11,8 @@ jobs:
           api-key-variable: 345b1568-06ac-40a4-9ee4-c85f63737f8a::DpeukOQPv2GRHirlin2L6ivgrSE=
           prisma-api-url: https://api.prismacloud.io
 orbs:
-  bridgecrew: bridgecrew/bridgecrew@1.0.5 
+  bridgecrew: bridgecrew/bridgecrew@1.0.5
+  checkov: bridgecrew/checkov-orb@0.0.3
   test:
     docker:
       - image: cimg/base:2023.03
