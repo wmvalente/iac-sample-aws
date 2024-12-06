@@ -12,12 +12,6 @@ jobs:
           directory: .
           api-key-variable: BC_API_KEY 
           prisma-api-url: https://api.prismacloud.io
-  test:
-    docker:
-      - image: cimg/base:2023.03
-    steps:
-      - checkout
-      - run: echo "this is the test job"
 
 # Orchestrate our job run sequence
 workflows:
