@@ -33,7 +33,7 @@ workflows:
 #Integrate Prisma Cloud CICD Runs
 orbs:
   bridgecrew: bridgecrew/bridgecrew@1.0.5
-jobs:
+
   build:
     executor: checkov/default
     steps:
