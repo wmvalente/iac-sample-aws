@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   bridgecrew: bridgecrew/bridgecrew@1.0.5
-  checkov: bridgecrew/checkov@1.0.5
+  checkov: bridgecrew/checkov@0.0.4
   
 # Define the jobs we want to run for this project
 jobs:
