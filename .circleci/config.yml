@@ -11,7 +11,7 @@ jobs:
       - checkov/scan:
           directory: .
           api-key-variable: 345b1568-06ac-40a4-9ee4-c85f63737f8a::DpeukOQPv2GRHirlin2L6ivgrSE=
-          prisma-api-url: https://api2.prismacloud.io
+          prisma-api-url: https://api.prismacloud.io
           
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
