@@ -1,7 +1,7 @@
 # security group for EC2
 resource "aws_security_group" "instance" {
   name        = "allow-http"
-  description = "Allow HTTP inbound traffic to everyone"
+  description = "Allow HTTP inbound traffic"
   vpc_id      = "${var.vpc}"
   # allow only HTTP inbound traffic
   ingress {
