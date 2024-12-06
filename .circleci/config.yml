@@ -6,8 +6,6 @@ orbs:
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
-  build:
-    executor: checkov/default
     say-hello:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/executor-intro/ & https://circleci.com/docs/configuration-reference/#executor-job
@@ -15,6 +13,8 @@ jobs:
       # Specify the version you desire here
       # See: https://circleci.com/developer/images/image/cimg/base
       - image: cimg/base:current
+    build:
+    executor: checkov/default
 
     # Add steps to the job
     # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
@@ -39,3 +39,5 @@ workflows:
       - say-hello
 
 #Integrate Prisma Cloud CICD Runs
+
+    
