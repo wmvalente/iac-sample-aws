@@ -5,6 +5,7 @@ orbs:
   bridgecrew: bridgecrew/bridgecrew@1.0.5
 jobs:
   build:
+    parallelism: 4
     executor: bridgecrew/default
     steps:
       - checkout
