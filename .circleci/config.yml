@@ -5,6 +5,7 @@ version: 2.1
 #Integrate Prisma Cloud CICD Runs
 orbs:
   bridgecrew: bridgecrew/bridgecrew@1.0.5
+  checkov: bridgecrew/checkov-orb@0.0.3
 jobs:
   build:
     executor: checkov/default
