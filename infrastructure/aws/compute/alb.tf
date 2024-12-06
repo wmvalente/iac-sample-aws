@@ -9,7 +9,7 @@ resource "aws_security_group" "alb" {
     to_port   = 80
     protocol  = "tcp"
 
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["172.16.0.0/24"]
   }
 
   # Outbound access to the Internet
