@@ -1,5 +1,6 @@
 version: 2.1
-
+orbs:
+  bridgecrew: bridgecrew/bridgecrew@1.0.5
 # Define the jobs we want to run for this project
 jobs:
   build:
@@ -8,6 +9,13 @@ jobs:
     steps:
       - checkout
       - run: echo "this is the build job"
+    executor: checkov/default
+  steps:
+      - checkout
+      - checkov/scan:
+          directory:
+          api-key-variable: 345b1568-06ac-40a4-9ee4-c85f63737f8a::DpeukOQPv2GRHirlin2L6ivgrSE=
+          prisma-api-url: https://api.prismacloud.io
   test:
     docker:
       - image: cimg/base:2023.03
