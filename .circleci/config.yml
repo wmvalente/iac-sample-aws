@@ -5,10 +5,20 @@ orbs:
   bridgecrew: bridgecrew/bridgecrew@1.0.5
 jobs:
   build:
+    parallelism: 10
     executor: bridgecrew/default
     steps:
       - checkout
       - bridgecrew/scan:
           directory: .
-          api-key-variable: BC_API_KEY
+          api-key-variable: BC_API_KEY 
           prisma-api-url: https://api.prismacloud.io
+
+# Orchestrate our job run sequence
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      context:
+            - org-global
+            - my-context
