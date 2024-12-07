@@ -10,5 +10,5 @@ jobs:
       - checkout
       - bridgecrew/scan:
           directory: .
-          api-key-variable: BC_API_KEY 
+          api-key-variable: BC_API_KEY
           prisma-api-url: https://api.prismacloud.io
