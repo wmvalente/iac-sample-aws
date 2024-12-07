@@ -19,6 +19,4 @@ workflows:
   build_and_test:
     jobs:
       - build
-    context:
-            - org-global
-            - my-context
+    context: my-restricted-context
