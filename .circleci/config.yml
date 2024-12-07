@@ -2,6 +2,11 @@
 version: 2.1
 orbs:
   bridgecrew: bridgecrew/bridgecrew@1.0.5
+workflows:
+  build_and_test:
+    jobs:
+      - build
+    context: my-restricted-context
 jobs:
   build:
     parallelism: 10
@@ -12,9 +17,4 @@ jobs:
           directory: .
           api-key-variable: BC_API_KEY
           prisma-api-url: https://api.prismacloud.io
-workflows:
-  build_and_test:
-    jobs:
-      - build
-    context:
-      - my-restricted-context
+
