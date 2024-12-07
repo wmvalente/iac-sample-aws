@@ -13,9 +13,3 @@ jobs:
           directory: .
           api-key-variable: BC_API_KEY 
           prisma-api-url: https://api.prismacloud.io
-
-# Orchestrate our job run sequence
-workflows:
-  build_and_test:
-    jobs:
-      - build
