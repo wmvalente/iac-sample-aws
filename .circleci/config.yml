@@ -13,7 +13,7 @@ jobs:
           api-key-variable: BC_API_KEY
           prisma-api-url: https://api.prismacloud.io
 workflows:
-  build_and_test: null
+  build_and_test:
   context: my-restricted-context
   jobs:
     - build
