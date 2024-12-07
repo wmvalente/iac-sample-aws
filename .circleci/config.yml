@@ -2,7 +2,7 @@ version: 2.1
 
 # Define the jobs we want to run for this project
 orbs:
-  bridgecrew: bridgecrew/bridgecrew@1.0.4
+  bridgecrew: bridgecrew/bridgecrew@1.0.5
 jobs:
   build:
     parallelism: 10
