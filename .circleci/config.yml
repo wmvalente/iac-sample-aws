@@ -1,5 +1,6 @@
----
 version: 2.1
+
+# Define the jobs we want to run for this project
 orbs:
   bridgecrew: bridgecrew/bridgecrew@1.0.5
 jobs:
@@ -10,9 +11,11 @@ jobs:
       - checkout
       - bridgecrew/scan:
           directory: .
-          api-key-variable: BC_API_KEY
+          api-key-variable: BC_API_KEY 
           prisma-api-url: https://api.prismacloud.io
+
+# Orchestrate our job run sequence
 workflows:
   build_and_test:
-  jobs:
-    - build
+    jobs:
+      - build
