@@ -4,6 +4,7 @@ orbs:
   bridgecrew: bridgecrew/bridgecrew@1.0.5
 jobs:
   build:
+    context: deploy-key-restricted-context
     parallelism: 10
     executor: bridgecrew/default
     steps:
@@ -16,4 +17,3 @@ workflows:
   build_and_test:
     jobs:
       - build
-    context: my-restricted-context
