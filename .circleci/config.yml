@@ -16,4 +16,3 @@ workflows:
   build_and_test:
     jobs:
       - build
-    context: deploy-key-restricted-context
